@@ -332,13 +332,40 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: relative;
   display: flex;
   justify-content: center;
+  perspective: 900px;            /* depth for the 3D tilt on the portrait */
 }
 .portrait-frame {
+  position: relative;
   width: 100%;
   max-width: 340px;
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  /* 3D tilt — --rx / --ry / --mx / --my are set by js/main.js while the pointer moves */
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(var(--lift, 1));
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+  box-shadow: 0 14px 30px rgba(27,26,23,0.10);
+  will-change: transform;
+}
+.portrait-frame.is-tilting {
+  transition: transform .08s linear, box-shadow .35s ease;
+  box-shadow: 0 30px 60px rgba(27,26,23,0.22);
+}
+/* soft light that follows the cursor across the photo */
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.32), transparent 55%);
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+.portrait-frame.is-tilting::after { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .portrait-frame { transform: none !important; }
+  .portrait-frame::after { display: none; }
 }
 .portrait-frame img {
   width: 100%;

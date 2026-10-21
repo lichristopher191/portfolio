@@ -178,4 +178,31 @@
       });
     }
   }
+
+  /* ---------- 7. headshot: 3D perspective tilt on hover (mouse / trackpad only) ---------- */
+  const heroVisual = document.querySelector('.hero-visual');
+  const portrait = document.querySelector('.portrait-frame');
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (heroVisual && portrait && canHover && !reduceMotion) {
+    const MAX_TILT = 12; // degrees
+    heroVisual.addEventListener('pointermove', function (e) {
+      const r = portrait.getBoundingClientRect();
+      // -1..1 from the photo's center, clamped so it never over-rotates
+      const px = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / (r.width / 2)));
+      const py = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 2)) / (r.height / 2)));
+      portrait.classList.add('is-tilting');
+      portrait.style.setProperty('--ry', (px * MAX_TILT).toFixed(2) + 'deg');
+      portrait.style.setProperty('--rx', (-py * MAX_TILT).toFixed(2) + 'deg');
+      portrait.style.setProperty('--lift', '1.03');
+      portrait.style.setProperty('--mx', ((px + 1) * 50).toFixed(1) + '%');
+      portrait.style.setProperty('--my', ((py + 1) * 50).toFixed(1) + '%');
+    });
+    heroVisual.addEventListener('pointerleave', function () {
+      portrait.classList.remove('is-tilting');
+      portrait.style.setProperty('--rx', '0deg');
+      portrait.style.setProperty('--ry', '0deg');
+      portrait.style.setProperty('--lift', '1');
+    });
+  }
 })();
