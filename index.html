@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Christopher Li — Product Designer & Front-End Developer</title>
+  <meta
+    name="description"
+    content="Christopher Li is a product designer and front-end developer at UC Irvine, building AI-driven, human-centered digital products."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css?v=11">
+
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231B1A17'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23F6F3EC' font-family='Georgia,serif'%3EC%3C/text%3E%3C/svg%3E"
+  >
+</head>
+
+<body data-page="home">
+
+  <!-- ============ HEADER / BUBBLE NAV ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">chris li</a>
+
+      <nav class="pill-nav" aria-label="Primary navigation">
+        <span class="pill-indicator" aria-hidden="true"></span>
+
+        <a href="index.html" class="pill-link" data-section="home">Home</a>
+        <a href="work.html" class="pill-link" data-section="work">Work</a>
+        <a href="about.html" class="pill-link" data-section="about">About</a>
+        <a href="resume.html" class="pill-link" data-section="resume">Résumé</a>
+        <a href="contact.html" class="pill-link" data-section="contact">Contact</a>
+      </nav>
+
+      <a
+        class="btn-ghost header-cta"
+        href="assets/resume/Christopher-Li-Resume.pdf"
+        download
+      >
+        Download CV <span aria-hidden="true">↓</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =========================================================
+         SECTION 1 — HERO
+         ========================================================= -->
+    <section class="hero">
+
+      <div class="hero-inner">
+
+        <div class="hero-copy" data-reveal>
+
+          <p class="hero-kicker">
+            PRODUCT DESIGN × FRONT-END
+          </p>
+
+          <h1 class="hero-title">
+            hey! i'm chris li,<br>
+            a designer <em>AND</em> a builder.
+          </h1>
+
+          <p class="hero-subtitle">
+            i've worked with ibm, masimo, leidos, startups, and nonprofits.
+            let me show you around!
+          </p>
+
+          <div class="hero-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>currently designing, building, and studying in taiwan</span>
+          </div>
+
+          <button
+            class="scroll-arrow"
+            id="scrollArrow"
+            aria-label="Scroll to see my work"
+            data-target="#projects-preview"
+          >
+            <svg
+              class="scribble-arrow"
+              viewBox="0 0 64 100"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                class="scribble-ghost"
+                d="M34 6
+                   C20 15, 45 22, 31 34
+                   C19 45, 45 53, 32 65
+                   C27 70, 29 75, 33 80"
+              />
+
+              <path
+                class="scribble-line"
+                d="M31 5
+                   C18 14, 43 22, 30 33
+                   C18 44, 43 52, 31 64
+                   C26 69, 28 75, 32 80"
+              />
+
+              <path
+                class="scribble-line scribble-head"
+                d="M19 70
+                   C24 74, 29 80, 32 88
+                   C36 79, 42 73, 48 69"
+              />
+            </svg>
+          </button>
+
+        </div>
+
+
+        <div class="hero-visual" data-reveal>
+
+          <div class="portrait-frame">
+            <img
+              src="assets/images/headshot.jpg"
+              alt="Christopher Li"
+            >
+          </div>
+
+          <div class="hero-chip chip-1">💻 react &amp; front-end</div>
+          <div class="hero-chip chip-2">🐱 cat dad</div>
+          <div class="hero-chip chip-3">🎨 figma &amp; design systems</div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 2 — MY WORK
+         ========================================================= -->
+    <section
+      id="projects-preview"
+      class="projects-preview"
+      data-reveal
+    >
+
+      <div class="projects-preview-inner">
+
+        <div class="section-head home-work-head">
+          <div>
+            <h2>my work</h2>
+          </div>
+
+          <a href="work.html" class="btn-secondary">
+            View all work →
+          </a>
+        </div>
+
+
+        <div class="work-grid home-work-grid">
+
+          <!-- IBM -->
+          <a
+            href="work.html"
+            class="work-card"
+            style="--card-bg:#B7C4AE; --card-bg-deep:#8FA083;"
+          >
+            <div class="card-visual">
+
+              <div class="home-project-screen home-project-screen--image">
+                <img src="assets/images/ibm-bob-screenshot.png" alt="IBM Bob AI evaluation dashboard screenshot">
+              </div>
+
+              <span class="tag-badge badge-left">Design Systems</span>
+              <span class="tag-badge badge-right">Shipped</span>
+
+              <div class="card-hover">
+                <span>View case study →</span>
+              </div>
+
+            </div>
+
+            <div class="card-caption">
+              <p class="card-quote">
+                Redesigned IBM Bob's AI evaluation dashboard, reaching 100+
+                internal users and 500+ runs shortly after launch.
+              </p>
+
+              <p class="card-meta">
+                IBM · BOB AI TEAM · 2026
+              </p>
+            </div>
+          </a>
+
+
+          <!-- LEIDOS -->
+          <a
+            href="work.html"
+            class="work-card"
+            style="--card-bg:#C7CBF0; --card-bg-deep:#777EC4;"
+          >
+            <div class="card-visual">
+
+              <div class="home-project-screen home-project-screen--image">
+                <img src="assets/images/leidos-persona-screenshot.png" alt="AI persona research platform chat interface screenshot">
+              </div>
+
+              <span class="tag-badge badge-left">0 → 1</span>
+              <span class="tag-badge badge-right">React</span>
+
+              <div class="card-hover">
+                <span>View case study →</span>
+              </div>
+
+            </div>
+
+            <div class="card-caption">
+              <p class="card-quote">
+                Built a 4-persona AI research platform on a fine-tuned LLM,
+                from Figma to a shipped React front end.
+              </p>
+
+              <p class="card-meta">
+                UCI × LEIDOS · 2026
+              </p>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============ EXPLORE STRIP ============ -->
+    <section id="explore" class="explore-strip" data-reveal>
+
+      <a class="explore-card" href="work.html">
+        <span class="explore-card-title">See my work</span>
+        <span class="explore-card-arrow">→</span>
+      </a>
+
+      <a class="explore-card" href="about.html">
+        <span class="explore-card-title">Get to know me</span>
+        <span class="explore-card-arrow">→</span>
+      </a>
+
+      <a class="explore-card" href="resume.html">
+        <span class="explore-card-title">Read my resume!</span>
+        <span class="explore-card-arrow">→</span>
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer-mini">
+    <span>© 2026 Christopher Li · Irvine, CA</span>
+    <a href="contact.html" class="footer-mini-link">Get in touch →</a>
+  </footer>
+
+
+  <script src="js/main.js?v=5"></script>
+
+</body>
+</html>

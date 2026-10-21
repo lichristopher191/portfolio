@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Christopher Li</title>
+<meta name="description" content="Selected product design and front-end work by Christopher Li.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231B1A17'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23F6F3EC' font-family='Georgia,serif'%3EC%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="work">
+
+<!-- ============ HEADER / BUBBLE NAV ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">chris li</a>
+
+    <nav class="pill-nav" aria-label="Primary navigation">
+      <span class="pill-indicator" aria-hidden="true"></span>
+      <a href="index.html"  class="pill-link" data-section="home">Home</a>
+      <a href="work.html"   class="pill-link" data-section="work">Work</a>
+      <a href="about.html"  class="pill-link" data-section="about">About</a>
+      <a href="resume.html" class="pill-link" data-section="resume">Résumé</a>
+      <a href="contact.html" class="pill-link" data-section="contact">Contact</a>
+    </nav>
+
+    <a class="btn-ghost header-cta" href="assets/resume/Christopher-Li-Resume.pdf" download>
+      Download CV <span aria-hidden="true">↓</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ SELECTED WORK ============ -->
+  <section class="work">
+    <div class="section-head" data-reveal>
+      <div>
+        <p class="section-kicker">Selected Work</p>
+        <h2>Things I've designed &amp; shipped</h2>
+      </div>
+
+      <div class="filter-pills" role="tablist" aria-label="Filter work by category">
+        <span class="filter-indicator" aria-hidden="true"></span>
+        <button class="filter-pill is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-pill" data-filter="design" role="tab" aria-selected="false">Product Design</button>
+        <button class="filter-pill" data-filter="dev" role="tab" aria-selected="false">Front-End</button>
+        <button class="filter-pill" data-filter="ai" role="tab" aria-selected="false">AI + ML</button>
+      </div>
+    </div>
+
+    <div class="work-grid" id="workGrid">
+
+      <article class="work-card" data-reveal data-category="design ai" style="--card-bg:var(--sage);--card-bg-deep:var(--sage-deep)"
+        data-title="IBM: Bob Evaluation Dashboard"
+        data-meta="IBM · Designer Intern, Bob AI Team · May – Aug 2026"
+        data-desc="Redesigned IBM Bob's AI evaluation dashboard after 10+ user interviews and 30+ synthesized findings, defining two core workflows — benchmark analysis and job-run analysis. Built both flows in React, contributed 5+ components to the Bob IDE design system, and validated the experience through usability testing before it reached 100+ internal users and 500+ runs shortly after launch.">
+        <div class="card-visual">
+          <span class="tag-badge badge-left">Design Systems</span>
+          <span class="tag-badge badge-right">Shipped</span>
+          <div class="device-mock placeholder-box">
+            <span class="placeholder-label">Add product screenshot<br>(dashboard UI)</span>
+          </div>
+          <div class="card-hover"><span>View case study →</span></div>
+        </div>
+        <div class="card-caption">
+          <p class="card-quote">Redesigned IBM Bob's AI evaluation dashboard, reaching 100+ internal users and 500+ runs shortly after launch.</p>
+          <p class="card-meta">IBM · Bob AI Team · 2026</p>
+        </div>
+      </article>
+
+      <article class="work-card" data-reveal data-category="design dev ai" style="--card-bg:var(--periwinkle);--card-bg-deep:var(--periwinkle-deep)"
+        data-title="AI Persona Research Platform"
+        data-meta="UCI × Leidos Capstone · Product Designer &amp; Front-End Dev · Jan – Jun 2026"
+        data-desc="Led UI/UX and front-end development across a 5-member team, owning 3 of 5 core workflows and building ~70% of the React interface while migrating the platform from Streamlit to React. Designed and developed a 4-persona AI platform wired to a Qwen3-1.7B model fine-tuned with LoRA on 6,200 autobiographical memories, with agentic capabilities via MCP — then presented the end-to-end system to 10+ Leidos stakeholders.">
+        <div class="card-visual">
+          <span class="tag-badge badge-left">0 → 1</span>
+          <span class="tag-badge badge-right">React</span>
+          <div class="device-mock placeholder-box">
+            <span class="placeholder-label">Add product screenshot<br>(persona platform UI)</span>
+          </div>
+          <div class="card-hover"><span>View case study →</span></div>
+        </div>
+        <div class="card-caption">
+          <p class="card-quote">Built a 4-persona AI research platform on a fine-tuned LLM, from Figma to a shipped React front end.</p>
+          <p class="card-meta">UCI × Leidos · 2026</p>
+        </div>
+      </article>
+
+      <article class="work-card" data-reveal data-category="design" style="--card-bg:var(--terracotta);--card-bg-deep:var(--terracotta-deep)"
+        data-title="Pulse Oximetry Device Iterations"
+        data-meta="Masimo · UI/UX Design, Engineering Intern · Jun – Aug 2025"
+        data-desc="Designed and shipped 3 major device iterations, 50+ screens each, translating clinical workflows and product requirements into production-ready interfaces for pulse oximetry products. Introduced detailed UI flow maps to clarify product logic, interaction states, and implementation requirements across 2+ engineering teams.">
+        <div class="card-visual">
+          <span class="tag-badge badge-left">Healthcare</span>
+          <span class="tag-badge badge-right">50+ screens</span>
+          <div class="device-mock placeholder-box">
+            <span class="placeholder-label">Add device screens<br>(pulse oximetry UI)</span>
+          </div>
+          <div class="card-hover"><span>View case study →</span></div>
+        </div>
+        <div class="card-caption">
+          <p class="card-quote">Shipped 3 device iterations for a medical device, turning clinical workflows into production UI.</p>
+          <p class="card-meta">Masimo · 2025</p>
+        </div>
+      </article>
+
+      <article class="work-card" data-reveal data-category="design" style="--card-bg:var(--sand);--card-bg-deep:var(--sand-deep)"
+        data-title="YUCare — Accessible Urgent Care"
+        data-meta="Personal Project · Product Designer · Research &amp; Prototyping"
+        data-desc="Surveyed 50+ patients and healthcare staff to identify pain points across the urgent-care experience, then translated findings into features focused on patient-provider communication and transparency. Designed 20+ wireframes and 5 interactive Figma prototypes, iterating through usability feedback into a WCAG-aligned design system for an accessible healthcare experience.">
+        <div class="card-visual">
+          <span class="tag-badge badge-left">WCAG</span>
+          <span class="tag-badge badge-right">Research</span>
+          <div class="device-mock placeholder-box">
+            <span class="placeholder-label">Add wireframes / prototype<br>screenshots</span>
+          </div>
+          <div class="card-hover"><span>View case study →</span></div>
+        </div>
+        <div class="card-caption">
+          <p class="card-quote">Designed a WCAG-aligned urgent-care experience from 50+ patient &amp; staff interviews.</p>
+          <p class="card-meta">Personal Project</p>
+        </div>
+      </article>
+
+      <article class="work-card" data-reveal data-category="dev ai" style="--card-bg:var(--periwinkle);--card-bg-deep:var(--periwinkle-deep)"
+        data-title="ZotConnect — AI Resume Critique"
+        data-meta="Hackathon · Best Overall (100+ teams)"
+        data-desc="Built a research-opportunity platform featuring a generative-AI résumé critique tool powered by Google Cloud APIs — won Best Overall against 100+ competing teams.">
+        <div class="card-visual">
+          <span class="tag-badge badge-left">🏆 Best Overall</span>
+          <span class="tag-badge badge-right">Hackathon</span>
+          <div class="device-mock placeholder-box">
+            <span class="placeholder-label">Add product screenshot<br>(ZotConnect UI)</span>
+          </div>
+          <div class="card-hover"><span>View case study →</span></div>
+        </div>
+        <div class="card-caption">
+          <p class="card-quote">Won Best Overall out of 100+ teams with an AI-powered résumé critique tool.</p>
+          <p class="card-meta">ZotConnect · Hackathon</p>
+        </div>
+      </article>
+
+      <article class="work-card" data-reveal data-category="design" style="--card-bg:var(--sand);--card-bg-deep:var(--sand-deep)"
+        data-title="Endgame.AI — Founding Design"
+        data-meta="Endgame.AI (Startup) · UI/UX Design Intern · Mar – Aug 2025"
+        data-desc="Joined as a founding design team member, establishing the product's visual direction and building 2+ scalable brand and UI libraries. Worked directly with the CEO and 15+ engineers, introducing weekly cross-functional design syncs and 3+ UI flow maps to improve alignment, handoff, and implementation.">
+        <div class="card-visual">
+          <span class="tag-badge badge-left">Brand + UI</span>
+          <span class="tag-badge badge-right">Founding team</span>
+          <div class="device-mock placeholder-box">
+            <span class="placeholder-label">Add brand / UI library<br>screenshots</span>
+          </div>
+          <div class="card-hover"><span>View case study →</span></div>
+        </div>
+        <div class="card-caption">
+          <p class="card-quote">Set the visual direction for an early-stage startup as a founding design hire.</p>
+          <p class="card-meta">Endgame.AI · 2025</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer-mini">
+  <span>© 2026 Christopher Li · Irvine, CA</span>
+  <a href="contact.html" class="footer-mini-link">Get in touch →</a>
+</footer>
+
+<!-- ============ CASE STUDY POPOUT MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close case study preview">×</button>
+    <div class="modal-screen placeholder-box" id="modalScreen">
+      <span class="placeholder-label">Case study screen preview</span>
+    </div>
+    <div class="modal-body">
+      <h3 id="modalTitle">Project title</h3>
+      <p class="modal-meta" id="modalMeta">Company · Role · Dates</p>
+      <p class="modal-desc" id="modalDesc">Description</p>
+      <a href="#" class="btn-primary" id="modalLink">View full case study →</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
